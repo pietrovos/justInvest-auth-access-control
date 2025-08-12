@@ -1,23 +1,60 @@
-*****Important -> If you run Problem2cTest, it will clear the password file and remove all the preset users you see below (because of @BeforeAll, which clears the password file), so it would be best to grade this last, thank you *****
+# Secure Authentication & Access Control System  
 
-1. Download ZIP folder into downloads: /home/sysc4810/Downloads/
-2. Extract File instead of ZIP folder into Downloads:  /home/sysc4810/Downloads/
-3. Go to terminal and type: cd /home/sysc4810/Downloads/SYSC4810_Assignment/out/artifacts/SYSC4810_Assignment_jar/
-4. Now, still in terminal, type: java -jar SYSC4810_Assignment.jar
-5. A graphical Interface will appear, where you have the choice to Sign up, or Login in. If you decide you login in, there are already several accounts present in the system. 
-Use these accounts to test if the proper permissions show up based on role, since my implementation can only assign roles by manually modifying the passwd.txt file
+A Java-based prototype implementing **user authentication**, **access control**, and a **proactive password policy** for a fictional financial platform, *justInvest*.  
+Developed as part of the **SYSC 4810A: Introduction to Software and Network Security** course.  
 
------------------------------------------------------
-Preset Accounts:
------------------------------------------------------
-Login Credentials:
-Username: SashaKim, 		Password: SashaKim1!
-Username: EmeryBlake, 		Password: EmeryBlake1!
-Username: NoorAbbasi, 		Password: NoorAbbasi1!
-Username: ZuriAdebayo, 		Password: ZuriAbe1!
-Username: MikaelChen, 		Password: MikaelChen1!
-Username: JordanRiley, 		Password: JordanRil1!
-Username: EllisNakamura,	Password: EllisNak1!
-Username: HarperDiaz, 		Password: HarperDiaz1!
-Username: AlexHayes, 		Password: AlexHayes1!
-Username: AdairPatel, 		Password: AdairPatel1!
+## 📌 Features  
+- **Role-Based Access Control (RBAC)** enforcing different permissions for clients, premium clients, and employees.  
+- **Secure password storage** with salted hashing.  
+- **Proactive password checker** enforcing:  
+  - Length between 8–12 characters  
+  - At least 1 uppercase, 1 lowercase, 1 digit, and 1 special character  
+  - No common weak passwords  
+  - No password matching the username  
+- **Graphical User Interface (GUI)** for signup and login.  
+- **Preset test accounts** for quick demonstration.  
+
+## 🚀 How to Run  
+**⚠️ Important:** Running `Problem2cTest` will clear the password file and remove preset users (due to `@BeforeAll`). Run it **last** if you wish to keep preset accounts for testing.  
+
+1. **Download** the ZIP folder into:  /home/sysc4810/Downloads/
+
+2. **Extract** the contents into:  /home/sysc4810/Downloads/
+
+3. Open a terminal and navigate to:  cd /home/sysc4810/Downloads/SYSC4810_Assignment/out/artifacts/SYSC4810_Assignment_jar/
+
+4. Run the application:  java -jar SYSC4810_Assignment.jar
+
+5. The GUI will appear. You can **Sign up** for a new account or **Login** using one of the preset accounts below.  
+
+## 👤 Preset Accounts  
+| Username        | Password         | Role                  |
+|-----------------|------------------|-----------------------|
+| SashaKim        | SashaKim1!       | Client                |
+| EmeryBlake      | EmeryBlake1!     | Client                |
+| NoorAbbasi      | NoorAbbasi1!     | Premium Client        |
+| ZuriAdebayo     | ZuriAbe1!        | Premium Client        |
+| MikaelChen      | MikaelChen1!     | Financial Advisor     |
+| JordanRiley     | JordanRil1!      | Financial Advisor     |
+| EllisNakamura   | EllisNak1!       | Financial Planner     |
+| HarperDiaz      | HarperDiaz1!     | Financial Planner     |
+| AlexHayes       | AlexHayes1!      | Teller                |
+| AdairPatel      | AdairPatel1!     | Teller                |
+
+> Roles for new signups must be manually assigned by modifying the `passwd.txt` file.  
+
+## 🛠 Technologies Used  
+- **Java** (Core + Swing for GUI)  
+- **File-based password storage** with hashing & salting  
+- **Role-Based Access Control** logic  
+
+## 📄 License  
+This project was completed as part of an academic assignment and is intended for educational purposes.  
+
+
+
+
+
+
+
+
